@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeenHub - A Space for Teenagers</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f8f8f8;
+height: 100%;
+}
+header {
+background-color: #ff5733;
+color: white;
+padding: 20px 0;
+text-align: center;
+font-size: 36px;
+font-weight: bold;
+}
+nav {
+background-color: #ffcc00;
+padding: 10px 0;
+text-align: center;
+}
+nav a {
+margin: 0 20px;
+text-decoration: none;
+color: #333;
+font-weight: bold;
+font-size: 18px;
+}
+nav a:hover {
+color: #ff5733;
+}
+.container {
+padding: 30px;
+max-width: 1000px;
+margin: 20px auto;
+background-color: white;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+min-height: 500px; /* Ensures container has enough height */
+}
+h2 {
+font-size: 28px;
+color: #333;
+}
+p {
+font-size: 18px;
+color: #666;
+line-height: 1.6;
+}
+footer {
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+background-color: #333;
+color: white;
+}
+button {
+background-color: #ff5733;
+color: white;
+border: none;
+padding: 12px 20px;
+cursor: pointer;
+font-size: 18px;
+border-radius: 5px;
+margin-top: 20px;
+}
+button:hover {
+background-color: #ff2d00;
+}
+.image-gallery img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+.extra-info {
+background-color: #fafafa;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+margin-top: 50px;
+}
+.icon-container {
+display: flex;
+justify-content: center;
+margin-top: 30px;
+}
+.icon-container div {
+text-align: center;
+margin: 20px;
+}
+.icon-container i {
+font-size: 50px;
+color: #ff5733;
+cursor: pointer;
+}
+.icon-container i:hover {
+color: #ff2d00;
+}
+.section-content {
+display: none;
+margin-top: 20px;
+}
+.section-content.active {
+display: block;
+}
+</style>
+</head>
+<body>
+
+<header>
+Welcome to TeenHub - Your Space for All Things Teen!
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Advice</a>
+<a href="#">Entertainment</a>
+<a href="#">School Life</a>
+<a href="#">Mental Health</a>
+</nav>
+
+<div class="container">
+<h2>Welcome to TeenHub!</h2>
+<p>TeenHub is a space where teens can find helpful advice, entertainment, and resources to thrive during their teenage years. Whether it's dealing with school stress, mental health challenges, or just looking for fun activities, we've got you covered!</p>
+
+<!-- Add More Content for Scrolling -->
+<div class="icon-container">
+<div>
+<i class="fas fa-comments" onclick="showSection('advice')"></i>
+<p>Advice</p>
+</div>
+<div>
+<i class="fas fa-gamepad" onclick="showSection('entertainment')"></i>
+<p>Entertainment</p>
+</div>
+<div>
+<i class="fas fa-school" onclick="showSection('school')"></i>
+<p>School Life</p>
+</div>
+<div>
+<i class="fas fa-brain" onclick="showSection('mental-health')"></i>
+<p>Mental Health</p>
+</div>
+</div>
+
+<!-- Content Sections -->
+<div id="advice" class="section-content">
+<h3>Advice for Teens</h3>
+<p>Teenhood can be challenging, but you don’t have to go through it alone. Here are some tips on handling stress, staying positive, and making the most of your high school years.</p>
+<p>Learn about managing peer pressure, overcoming challenges, and focusing on your goals. We have expert tips and resources to help you succeed!</p>
+</div>
+
+<div id="entertainment" class="section-content">
+<h3>Entertainment</h3>
+<p>From gaming to movies, TeenHub keeps you updated on the latest in entertainment. Check out the most exciting trends and discover your next favorite movie or game!</p>
+<p>Get the best reviews and recommendations on games, movies, TV shows, and music to stay up-to-date with all the fun stuff!</p>
+</div>
+
+<div id="school" class="section-content">
+<h3>School Life</h3>
+<p>School can be tough, but with the right mindset and organization, you can achieve your goals. Explore our tips on staying focused, managing time, and acing exams!</p>
+<p>We offer study hacks, time management strategies, and advice for balancing school with your social life. Stay on top of your homework with ease!</p>
+</div>
+
+<div id="mental-health" class="section-content">
+<h3>Mental Health Matters</h3>
+<p>Your mental well-being is just as important as your physical health. We provide resources on mindfulness, stress management, and seeking help when needed.</p>
+<p>Learn how to deal with stress, anxiety, and build a positive mindset. Reach out to our community for support and share your experiences!</p>
+</div>
+
+<!-- Extra Section to Ensure the Page is Long -->
+<div class="extra-info">
+<h3>More Fun Resources!</h3>
+<p>Check out these fun articles and links:</p>
+<ul>
+<li><a href="#">How to Build Healthy Habits as a Teen</a></li>
+<li><a href="#">Top 5 Online Games You Must Try!</a></li>
+<li><a href="#">How to Stay Motivated During School</a></li>
+</ul>
+</div>
+
+<button onclick="showMessage()">Join the TeenHub Community</button>
+<p id="message" style="display: none; color: green; font-weight: bold;">Thanks for joining! You're part of the TeenHub community!</p>
+</div>
+
+<footer>
+&copy; 2025 TeenHub | All Rights Reserved | <a href="mailto:support@teenhub.com" style="color: white;">Contact Us</a>
+</footer>
+
+<script>
+// Show specific section when icon is clicked
+function showSection(section) {
+// Hide all sections
+const sections = document.querySelectorAll('.section-content');
+sections.forEach(function (section) {
+section.classList.remove('active');
+});
+
+// Show the clicked section
+const activeSection = document.getElementById(section);
+activeSection.classList.add('active');
+}
+
+function showMessage() {
+document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
